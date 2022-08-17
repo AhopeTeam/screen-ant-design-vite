@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import { useStore } from 'vuex'
 
-defineProps<{ msg: string }>()
 const store = useStore()
 
 const count = ref(0)
@@ -10,7 +9,6 @@ const fs = ref(store.state.rem.fs)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <h2 class="rem">我是vuex的值：{{ fs }}</h2>
