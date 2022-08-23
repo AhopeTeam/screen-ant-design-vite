@@ -2,16 +2,36 @@
  * @Description: 学习页面
  * @Author: 丁飞洋
  * @Date: 2022-08-20 15:40:37
- * @LastEditTime: 2022-08-21 16:58:21
+ * @LastEditTime: 2022-08-21 18:53:23
  * @LastEditors: 丁飞洋
  */
 
-import { string } from "vue-types";
+import { number } from "vue-types"
 
+//对象类型的
+//属性名后加问号标识可选的
+//中括号标识任意属性名,值的类型为any
+let q:{
+    name:string
+    age?:number
+    [propName:string]:any
+}
+//函数类型
+//void函数值为没有返回值
+function fnq(num:string):void{}
+//后面带参数则有返回值
+function fnw(num:string):number{
+    return 1
+}
+//never 标识永远不会返回结果
+function fne():never{
+    throw new Error("报错了")
+}
+//
 //生命数组
 let a: string[];
 let b: Array<string>
-//两种声明方式
+//两种声明方式d
 
 
 //元组是长度固定的数组
