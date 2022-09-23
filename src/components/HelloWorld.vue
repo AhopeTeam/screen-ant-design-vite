@@ -1,42 +1,23 @@
+<template>
+  <AdaptEchart :option="option" style="height: 10.80rem;width: 19.20rem" />
+</template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useStore } from 'vuex'
-
-const store = useStore()
-
-const count = ref(0)
-const fs = ref(store.state.rem.fs)
+import AdaptEchart from '@/components/AdaptChart.vue'
+let option = ref()
+option.value = {
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: [150, 230, 224, 218, 135, 147, 260],
+      type: 'line'
+    }
+  ]
+};
 </script>
-
-<template>
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <h2 class="rem">我是vuex的值：{{ fs }}</h2>
-    <p>
-      Edit123
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-</template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-.rem {
-  font-size: .8rem;
-}
-</style>
