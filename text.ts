@@ -1,8 +1,12 @@
 /*
- * @Description: 学习页面
+ * @Description: 学习页面1.0
  * @Author: 丁飞洋
  * @Date: 2022-08-20 15:40:37
+<<<<<<< HEAD
  * @LastEditTime: 2022-08-21 18:53:23
+=======
+ * @LastEditTime: 2022-08-21 17:19:55
+>>>>>>> test
  * @LastEditors: 丁飞洋
  */
 
