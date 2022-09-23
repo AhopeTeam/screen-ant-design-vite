@@ -2,7 +2,7 @@
  * @Description: 接口统一处理页面
  * @Author: 丁飞洋
  * @Date: 2022-08-18 16:15:37
- * @LastEditTime: 2022-08-21 17:00:40
+ * @LastEditTime: 2022-09-23 10:12:58
  * @LastEditors: 丁飞洋
  */
 import axios from 'axios'
@@ -21,7 +21,13 @@ const service: any = axios.create({
 // request interceptor
 
 service.interceptors.request.use(
-    <T>(config:T ):T => {
+    (   config: {
+        headers: {
+            //'Content-Type':'application/x-www-form-urlencoded',   // 传参方式表单
+            'Content-Type': string; // 传参方式json
+            token: string; // 这里自定义配置，这里传的是token
+        };
+    }) => {
         // 配置请求头
         config.headers = {
             //'Content-Type':'application/x-www-form-urlencoded',   // 传参方式表单
