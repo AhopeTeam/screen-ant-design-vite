@@ -2,7 +2,7 @@
  * @Description: 接口统一处理页面
  * @Author: 丁飞洋
  * @Date: 2022-08-18 16:15:37
- * @LastEditTime: 2022-09-23 10:12:58
+ * @LastEditTime: 2022-09-23 16:23:54
  * @LastEditors: 丁飞洋
  */
 import axios from 'axios'
@@ -14,25 +14,27 @@ import axios from 'axios'
 
 // create an axios instance
 const service: any = axios.create({
-    baseURL: process.env.VUE_APP_URL,
+    // baseURL: import.meta.env.VITE_BASE_API,
     withCredentials: true, // send cookies when cross-domain requests
     timeout: 30000 // request timeout
 })
 // request interceptor
 
 service.interceptors.request.use(
-    (   config: {
+    (config: {
         headers: {
             //'Content-Type':'application/x-www-form-urlencoded',   // 传参方式表单
             'Content-Type': string; // 传参方式json
-            token: string; // 这里自定义配置，这里传的是token
+            // token: string; // 这里自定义配置，这里传的是token
+            'X-Token':string
         };
     }) => {
         // 配置请求头
         config.headers = {
             //'Content-Type':'application/x-www-form-urlencoded',   // 传参方式表单
             'Content-Type': 'application/json;charset=UTF-8',        // 传参方式json
-            'token': '80c483d59ca86ad0393cf8a98416e2a1'              // 这里自定义配置，这里传的是token
+            // 'token': '80c483d59ca86ad0393cf8a98416e2a1',
+            'X-Token': '1dd1e7133379499c9d4043c0f287a1ea'              // 这里自定义配置，这里传的是token
         };
         return config;
     },
@@ -52,7 +54,7 @@ service.interceptors.response.use(
             msg: string
         } = response.data
         // res = response.data
-        var tag:boolean = false
+        var tag: boolean = false
         if (typeof res.retcode !== 'undefined') {
             tag = (res.retcode != 0)
         }

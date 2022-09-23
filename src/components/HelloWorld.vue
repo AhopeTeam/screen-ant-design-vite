@@ -2,17 +2,52 @@
  * @Descriptionyle
  * @Author: 丁飞洋
  * @Date: 2022-08-16 17:43:37
- * @LastEditTime: 2022-09-23 10:36:28
+ * @LastEditTime: 2022-09-23 14:24:21
  * @LastEditors: 丁飞洋
 -->
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useStore } from 'vuex';
-
+import { getCode } from '../api/text';
 const store = useStore();
-
 const count = ref(0);
 const fs = ref(store.state.rem.fs);
+// let param: { mountType: number, name: string,page:number,size:number,sort:number,tree:string,type:number }
+const param = {
+    mountType: 0,
+    name: '',
+    page: 1,
+    size: 20,
+    sort: 0,
+    tree: '',
+    type: 4,
+};
+
+//请求
+onMounted(() => {
+    getCode(param)
+        .then((res: unknown) => {
+            console.log(res);
+        })
+        .catch((err: unknown) => {
+            console.log(err);
+        });
+});
+// let param = {
+//     code: row,
+// };
+// stopRunn(param)
+//     .then((response) => {
+//         this.$message({
+//             message: '停止成功',
+//             type: 'success',
+//         });
+//     })
+//     .catch((err) => {
+//         this.$message({
+//             message: '停止失败',
+//         });
+//     });
 </script>
 
 <template>
@@ -51,10 +86,10 @@ const fs = ref(store.state.rem.fs);
     .rem {
         color: aqua;
     }
-    p{
+    p {
         color: blue;
     }
-    button{
+    button {
         color: gray;
     }
 }
