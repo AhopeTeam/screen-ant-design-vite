@@ -51,6 +51,7 @@ onMounted(() => {
 </script>
 
 <template>
+<<<<<<< HEAD
     <div class="card">
         <button type="button" @click="count++">count is {{ count }}</button>
         <h2 class="rem">我是vuex的值：{{ fs }}</h2>
@@ -59,6 +60,16 @@ onMounted(() => {
             <code>components/HelloWorld.vue</code> to test HMR
         </p>
     </div>
+=======
+  <div class="card">
+    <button type="button" @click="count++">count is {{ count }}</button>
+    <h2 class="rem">我是vuex的值：{{ fs }}</h2>
+    <p>
+      Edit123
+      <code>components/HelloWorld.vue</code> to test HMR
+    </p>
+  </div>
+>>>>>>> fab31545761659de36f933c4883f3dc6bbb01a73
 
     <p>
         Check out

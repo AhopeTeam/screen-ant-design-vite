@@ -6,11 +6,20 @@ const url = ''
 // const path = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
+<<<<<<< HEAD
     plugins: [vue()],
     resolve: {
         alias: {
             '@': resolve(__dirname, 'src'),
         },
+=======
+  plugins: [
+    vue(),
+  ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+>>>>>>> fab31545761659de36f933c4883f3dc6bbb01a73
     },
     server: {
         //反向代理配置，注意rewrite写法，开始没看文档在这里踩了坑

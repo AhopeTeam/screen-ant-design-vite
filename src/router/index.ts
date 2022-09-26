@@ -1,16 +1,13 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+/* eslint-disable require-await */
+import {createRouter, createWebHashHistory} from 'vue-router';
 const routes = [
-  {
-    path: '/',
-    component: () => import('../components/HelloWorld.vue'),
-  },
-  {
-    path: '/test',
-    component: () => import('@/components/test.vue'),
-  },
-]
+	{
+		path: '/',
+		component: () => import('../components/HelloWorld.vue'),
+	}
+];
 
 export default createRouter({
-  history: createWebHashHistory(),
-  routes,
-})
+	history: createWebHashHistory(),
+	routes,
+});
