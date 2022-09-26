@@ -14,7 +14,7 @@ import axios from 'axios'
 
 // create an axios instance
 const service: any = axios.create({
-    // baseURL: import.meta.env.VITE_BASE_API,
+    baseURL: import.meta.env.VITE_BASE_API,
     withCredentials: true, // send cookies when cross-domain requests
     timeout: 30000 // request timeout
 })
