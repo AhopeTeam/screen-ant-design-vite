@@ -1,8 +1,8 @@
 <!--
- * @Descriptionyle
+ * @description's
  * @Author: 丁飞洋
  * @Date: 2022-08-16 17:43:37
- * @LastEditTime: 2022-09-23 14:24:21
+ * @LastEditTime: 2022-09-26 09:29:46
  * @LastEditors: 丁飞洋
 -->
 <script setup lang="ts">
@@ -56,7 +56,7 @@ onMounted(() => {
         <h2 class="rem">我是vuex的值：{{ fs }}</h2>
         <p>
             Edit
-            <code>components/HelloWorld.vue</code> to test HMR
+            <code class=".ts">components/HelloWorld.vue</code> to test HMR
         </p>
     </div>
 
@@ -81,13 +81,16 @@ onMounted(() => {
 }
 </style>
 <style lang="less" scoped>
+@w: 20px;
+@color-blue: #2874c2;
 .card {
     color: antiquewhite;
     .rem {
         color: aqua;
     }
     p {
-        color: blue;
+        font-size: @w;
+        color: @color-blue;
     }
     button {
         color: gray;
