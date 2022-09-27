@@ -12,6 +12,8 @@ export default defineConfig({
         },
     },
     server: {
+        host: '0.0.0.0',
+        port: 3001, //更改启动端口
         //反向代理配置，注意rewrite写法，开始没看文档在这里踩了坑
         proxy: {
             '/manager': {
