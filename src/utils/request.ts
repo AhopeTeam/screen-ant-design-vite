@@ -2,11 +2,7 @@
  * @Description: 接口统一处理页面
  * @Author: 丁飞洋
  * @Date: 2022-08-18 16:15:37
-<<<<<<< HEAD
  * @LastEditTime: 2022-08-21 19:15:52
-=======
- * @LastEditTime: 2022-09-23 16:23:54
->>>>>>> test
  * @LastEditors: 丁飞洋
  */
 import axios,{AxiosRequestConfig} from 'axios'
@@ -17,7 +13,6 @@ import axios,{AxiosRequestConfig} from 'axios'
 
 
 // create an axios instance
-<<<<<<< HEAD
 // interface Service {
 //     creat( {
 //         baseURL: string,
@@ -27,10 +22,6 @@ import axios,{AxiosRequestConfig} from 'axios'
 // }
 const service = axios.create({
     baseURL: process.env.VUE_APP_URL,
-=======
-const service: any = axios.create({
-    // baseURL: import.meta.env.VITE_BASE_API,
->>>>>>> test
     withCredentials: true, // send cookies when cross-domain requests
     timeout: 30000 // request timeout
 })
@@ -43,18 +34,7 @@ interface Config {
 }
 
 service.interceptors.request.use(
-<<<<<<< HEAD
     (config:AxiosRequestConfig):AxiosRequestConfig => {
-=======
-    (config: {
-        headers: {
-            //'Content-Type':'application/x-www-form-urlencoded',   // 传参方式表单
-            'Content-Type': string; // 传参方式json
-            // token: string; // 这里自定义配置，这里传的是token
-            'X-Token':string
-        };
-    }) => {
->>>>>>> test
         // 配置请求头
         config.headers = {   // 传参方式表单
             'Content-Type': 'application/json;charset=UTF-8',        // 传参方式json
