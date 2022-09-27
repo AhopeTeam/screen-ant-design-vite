@@ -1,31 +1,4 @@
 {
-<<<<<<< HEAD
-    "name": "vite-project",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite --mode development",
-        "build": "vue-tsc --noEmit && vite build",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "ant-design-vue": "^3.2.11",
-        "axios": "^0.27.2",
-        "vue": "^3.2.37",
-        "vue-router": "^4.0.13",
-        "vuex": "^4.0.2"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-vue": "^3.0.3",
-        "less": "^4.1.3",
-        "typescript": "^4.6.4",
-        "vite": "^3.0.7",
-        "vue-cli-plugin-style-resources-loader": "^0.1.5",
-        "vue-tsc": "^0.39.5"
-    }
-}
-=======
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
@@ -51,4 +24,3 @@
     "vue-tsc": "^0.39.5"
   }
 }
->>>>>>> fab31545761659de36f933c4883f3dc6bbb01a73
